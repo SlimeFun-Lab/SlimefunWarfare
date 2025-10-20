@@ -6,26 +6,29 @@ plugins {
 repositories {
     mavenLocal()
     maven("https://jitpack.io")
-    maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://repo.codemc.org/repository/maven-public")
     maven("https://repo.maven.apache.org/maven2/")
 }
 
 dependencies {
-    compileOnly("org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT")
-    compileOnly("com.github.Slimefun:Slimefun4:RC-37")
+    compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT")
+    compileOnly("com.github.SlimeFun-Lab:Slimefun4:3ea21da")
 
-    implementation("io.github.Mooy1:InfinityLib:1.3.2")
+    implementation("com.github.SlimeFun-Lab:InfinityLib:d0cae07713")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
-    compileOnly("org.projectlombok:lombok:1.18.20")
-    annotationProcessor("org.projectlombok:lombok:1.18.20")
+    implementation("commons-lang:commons-lang:2.6")
+    compileOnly("org.projectlombok:lombok:1.18.38")
+    annotationProcessor("org.projectlombok:lombok:1.18.38")
 }
 
 group = "io.github.seggan.slimefunwarfare"
 version = "UNOFFICIAL"
 
 java {
-    toolchain.languageVersion = JavaLanguageVersion.of(17)
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }
 
 tasks.shadowJar {

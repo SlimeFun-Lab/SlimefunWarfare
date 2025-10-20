@@ -16,27 +16,27 @@ public class ExplosiveSynthesizer extends AContainer implements RecipeDisplayIte
 
     public ExplosiveSynthesizer() {
         super(Categories.MACHINES, Items.EXPLOSIVE_SYNTHESIZER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-            Items.REINFORCED_SLIMESTEEL, SlimefunItems.REINFORCED_PLATE, Items.REINFORCED_SLIMESTEEL,
-            SlimefunItems.REINFORCED_PLATE, SlimefunItems.BLISTERING_INGOT_3, SlimefunItems.REINFORCED_PLATE,
-            Items.REINFORCED_SLIMESTEEL, SlimefunItems.REINFORCED_PLATE, Items.REINFORCED_SLIMESTEEL
+            Items.REINFORCED_SLIMESTEEL.asOne(), SlimefunItems.REINFORCED_PLATE.asOne(), Items.REINFORCED_SLIMESTEEL.asOne(),
+            SlimefunItems.REINFORCED_PLATE.asOne(), SlimefunItems.BLISTERING_INGOT_3.asOne(), SlimefunItems.REINFORCED_PLATE.asOne(),
+            Items.REINFORCED_SLIMESTEEL.asOne(), SlimefunItems.REINFORCED_PLATE.asOne(), Items.REINFORCED_SLIMESTEEL.asOne()
         });
     }
 
     @Override
     protected void registerDefaultRecipes() {
         registerRecipe(5,
-            new ItemStack[]{Items.PURIFIED_LIQUID_NITROGEN, new ItemStack(Material.COAL)},
-            new ItemStack[]{new SlimefunItemStack(Items.AZIDOAZIDE_AZIDE, 2)}
+            new ItemStack[]{Items.PURIFIED_LIQUID_NITROGEN.asOne(), new ItemStack(Material.COAL)},
+            new ItemStack[]{Items.AZIDOAZIDE_AZIDE.asQuantity(2)}
         );
 
         registerRecipe(5,
-            new ItemStack[]{Items.LIQUID_NITROGEN, new ItemStack(Material.DRIED_KELP)},
-            new ItemStack[]{new SlimefunItemStack(Items.NITROGEN_TRIIODIDE, 2)}
+            new ItemStack[]{Items.LIQUID_NITROGEN.asOne(), new ItemStack(Material.DRIED_KELP)},
+            new ItemStack[]{Items.NITROGEN_TRIIODIDE.asQuantity(2)}
         );
 
         registerRecipe(5,
-            new ItemStack[]{SlimefunItems.SULFATE, SlimefunItems.OIL_BUCKET},
-            new ItemStack[]{new SlimefunItemStack(Items.THIOACETONE, 2)}
+            new ItemStack[]{SlimefunItems.SULFATE.asOne(), SlimefunItems.OIL_BUCKET.asOne()},
+            new ItemStack[]{Items.THIOACETONE.asQuantity(2)}
         );
     }
 

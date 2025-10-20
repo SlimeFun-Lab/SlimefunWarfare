@@ -75,7 +75,7 @@ public class GrenadeListener implements Listener {
                     1
                 ), true);
                 cloud.addCustomEffect(new PotionEffect(
-                    PotionEffectType.CONFUSION,
+                    PotionEffectType.NAUSEA,
                     500,
                     2
                 ), true);
@@ -93,7 +93,7 @@ public class GrenadeListener implements Listener {
                 cloud = (AreaEffectCloud) snowball.getWorld()
                     .spawnEntity(loc, EntityType.AREA_EFFECT_CLOUD);
                 cloud.addCustomEffect(new PotionEffect(
-                    PotionEffectType.CONFUSION,
+                    PotionEffectType.NAUSEA,
                     1200,
                     9
                 ), true);
@@ -108,7 +108,7 @@ public class GrenadeListener implements Listener {
                 cloud = (AreaEffectCloud) snowball.getWorld()
                     .spawnEntity(loc, EntityType.AREA_EFFECT_CLOUD);
                 cloud.addCustomEffect(new PotionEffect(
-                    PotionEffectType.CONFUSION,
+                    PotionEffectType.NAUSEA,
                     60 * 20,
                     9
                 ), true);

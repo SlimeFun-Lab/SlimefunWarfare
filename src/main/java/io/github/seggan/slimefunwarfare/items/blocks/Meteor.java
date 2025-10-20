@@ -29,13 +29,13 @@ public class Meteor extends SlimefunItem {
                 } else {
                     SlimefunItemStack stack = getItem().equals(Items.OSMIUM_METEOR) ? Items.OSMIUM_DUST : Items.SEGGANESSON;
 
-                    drops.add(stack.clone());
-                    int fortune = itemStack.getEnchantmentLevel(Enchantment.LOOT_BONUS_BLOCKS);
+                    drops.add(stack.item().clone());
+                    int fortune = itemStack.getEnchantmentLevel(Enchantment.LOOTING);
                     if (fortune == 0) return;
 
                     for (int i = 0; i < fortune; i++) {
                         if (ThreadLocalRandom.current().nextBoolean()) {
-                            drops.add(stack.clone());
+                            drops.add(stack.item().clone());
                         }
                     }
                 }

@@ -17,9 +17,9 @@ public class EnergyRifle extends Gun implements Rechargeable {
 
     public EnergyRifle() {
         super(Items.ENERGY_RIFLE, new ItemStack[]{
-            Items.OSMIUM_SUPERALLOY, Items.OSMIUM_SUPERALLOY, Items.SEGGANESSON,
-            Items.ADVANCED_BARREL, Items.ADVANCED_BARREL, Items.ULTRA_MAGNET,
-            Items.OSMIUM_SUPERALLOY, SlimefunItems.ENERGIZED_CAPACITOR, Items.ENERGY_RECTIFIER
+            Items.OSMIUM_SUPERALLOY.asOne(), Items.OSMIUM_SUPERALLOY.asOne(), Items.SEGGANESSON.asOne(),
+            Items.ADVANCED_BARREL.asOne(), Items.ADVANCED_BARREL.asOne(), Items.ULTRA_MAGNET.asOne(),
+            Items.OSMIUM_SUPERALLOY.asOne(), SlimefunItems.ENERGIZED_CAPACITOR.asOne(), Items.ENERGY_RECTIFIER.asOne()
         }, 100, 20, 0.2);
     }
 

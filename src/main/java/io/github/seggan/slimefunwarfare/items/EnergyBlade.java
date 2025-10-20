@@ -12,9 +12,9 @@ public class EnergyBlade extends SlimefunItem implements Rechargeable {
 
     public EnergyBlade() {
         super(Categories.MELEE, Items.ENERGY_BLADE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-            Items.SEGGANESSON, SlimefunItems.SYNTHETIC_DIAMOND, Items.SEGGANESSON,
-            Items.SEGGANESSON, SlimefunItems.SYNTHETIC_DIAMOND, Items.SEGGANESSON,
-            Items.OSMIUM_SUPERALLOY, Items.ENERGY_RECTIFIER, Items.OSMIUM_SUPERALLOY
+            Items.SEGGANESSON.asOne(), SlimefunItems.SYNTHETIC_DIAMOND.asOne(), Items.SEGGANESSON.asOne(),
+            Items.SEGGANESSON.asOne(), SlimefunItems.SYNTHETIC_DIAMOND.asOne(), Items.SEGGANESSON.asOne(),
+            Items.OSMIUM_SUPERALLOY.asOne(), Items.ENERGY_RECTIFIER.asOne(), Items.OSMIUM_SUPERALLOY.asOne()
         });
     }
 

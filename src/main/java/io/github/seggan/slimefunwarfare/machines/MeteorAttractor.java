@@ -32,9 +32,9 @@ public class MeteorAttractor extends SimpleSlimefunItem<BlockUseHandler> {
 
     public MeteorAttractor() {
         super(Categories.MACHINES, Items.METEOR_ATTRACTOR, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-            Items.NDFEB_ALLOY_BLOCK, null, Items.NDFEB_ALLOY_BLOCK,
-            Items.NDFEB_ALLOY_BLOCK, null, Items.NDFEB_ALLOY_BLOCK,
-            Items.TERFENOL_D_BLOCK, Items.NDFEB_ALLOY_BLOCK, Items.TERFENOL_D_BLOCK
+            Items.NDFEB_ALLOY_BLOCK.asOne(), null, Items.NDFEB_ALLOY_BLOCK.asOne(),
+            Items.NDFEB_ALLOY_BLOCK.asOne(), null, Items.NDFEB_ALLOY_BLOCK.asOne(),
+            Items.TERFENOL_D_BLOCK.asOne(), Items.NDFEB_ALLOY_BLOCK.asOne(), Items.TERFENOL_D_BLOCK.asOne()
         });
     }
 

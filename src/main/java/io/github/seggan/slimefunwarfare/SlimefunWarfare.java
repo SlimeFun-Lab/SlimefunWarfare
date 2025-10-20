@@ -68,7 +68,17 @@ public class SlimefunWarfare extends AbstractAddon implements Listener {
         instance = this;
 
         if (getConfig().getBoolean("auto-update", true)) {
-            new BlobBuildUpdater(this, getFile(), "SlimefunWarfare").start();
+            String v = getDescription().getVersion();
+            boolean canAutoUpdate = v != null && (v.startsWith("Build") || v.startsWith("Dev"));
+            if (canAutoUpdate) {
+                try {
+                    new BlobBuildUpdater(this, getFile(), "SlimefunWarfare").start();
+                } catch (IllegalArgumentException e) {
+                    getLogger().warning("Auto-updater disabled: " + e.getMessage());
+                }
+            } else {
+                getLogger().info("Updater disabled: version='" + v + "'");
+            }
         }
 
         new Metrics(this, 9227);

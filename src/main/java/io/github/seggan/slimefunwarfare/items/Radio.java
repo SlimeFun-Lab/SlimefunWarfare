@@ -24,9 +24,9 @@ public class Radio extends SimpleSlimefunItem<ItemUseHandler> {
 
     public Radio() {
         super(Categories.GENERAL, Items.RADIO, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-            SlimefunItems.GPS_TRANSMITTER_4, new ItemStack(Material.REDSTONE_TORCH), SlimefunItems.GPS_TRANSMITTER_4,
-            Items.LASER_DIODE, Items.FIBER_OPTIC_CABLE, Items.LASER_DIODE,
-            Items.OSMIUM_INGOT, SlimefunItems.ADVANCED_CIRCUIT_BOARD, Items.OSMIUM_INGOT
+            SlimefunItems.GPS_TRANSMITTER_4.asOne(), new ItemStack(Material.REDSTONE_TORCH), SlimefunItems.GPS_TRANSMITTER_4.asOne(),
+            Items.LASER_DIODE.asOne(), Items.FIBER_OPTIC_CABLE.asOne(), Items.LASER_DIODE.asOne(),
+            Items.OSMIUM_INGOT.asOne(), SlimefunItems.ADVANCED_CIRCUIT_BOARD.asOne(), Items.OSMIUM_INGOT.asOne()
         });
     }
 

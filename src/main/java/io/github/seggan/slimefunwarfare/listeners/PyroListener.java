@@ -14,7 +14,7 @@ public class PyroListener implements Listener {
 
     @EventHandler
     public void onPyroPowderCombust(EntityCombustByBlockEvent e) {
-        if (e.getEntityType() != EntityType.DROPPED_ITEM) {
+        if (e.getEntityType() != EntityType.ITEM) {
             return;
         }
         Entity entity = e.getEntity();

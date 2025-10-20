@@ -31,7 +31,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 public class IonExchangeSeparator extends AbstractMachineBlock implements EnergyNetComponent, MachineProcessHolder<IonExchangeSeparator.Operation> {
 
-    private static final ItemStack NONE = new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " ");
+    private static final ItemStack NONE = CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " ");
     private static final int[] BACKGROUND = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 13, 31, 36, 37, 38, 39, 40, 41, 42, 43, 44};
     private static final int[] INPUT = new int[]{9, 10, 11, 12, 18, 21, 27, 28, 29, 30};
     private static final int[] OUTPUT = new int[]{14, 15, 16, 17, 23, 26, 32, 33, 34, 35};
@@ -40,21 +40,21 @@ public class IonExchangeSeparator extends AbstractMachineBlock implements Energy
 
     public IonExchangeSeparator() {
         super(Categories.MACHINES, Items.ION_EXCHANGE_SEPARATOR, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-            Items.REINFORCED_SLIMESTEEL, SlimefunItems.ELECTRO_MAGNET, Items.REINFORCED_SLIMESTEEL,
-            SlimefunItems.SULFATE, null, SlimefunItems.SULFATE,
-            Items.REINFORCED_SLIMESTEEL, SlimefunItems.ELECTRO_MAGNET, Items.REINFORCED_SLIMESTEEL
+            Items.REINFORCED_SLIMESTEEL.asOne(), SlimefunItems.ELECTRO_MAGNET.asOne(), Items.REINFORCED_SLIMESTEEL.asOne(),
+            SlimefunItems.SULFATE.asOne(), null, SlimefunItems.SULFATE.asOne(),
+            Items.REINFORCED_SLIMESTEEL.asOne(), SlimefunItems.ELECTRO_MAGNET.asOne(), Items.REINFORCED_SLIMESTEEL.asOne()
         });
 
         processor.setProgressBar(new ItemStack(Material.IRON_PICKAXE));
 
-        results.add(Items.LANTHANUM_INGOT);
-        results.add(Items.NEODYMIUM_INGOT);
-        results.add(Items.GADOLINIUM_INGOT);
-        results.add(Items.TERBIUM_INGOT);
-        results.add(Items.DYSPROSIUM_INGOT);
-        results.add(Items.HOLMIUM_INGOT);
-        results.add(Items.ERBIUM_INGOT);
-        results.add(Items.YTTERBIUM_INGOT);
+        results.add(Items.LANTHANUM_INGOT.asOne());
+        results.add(Items.NEODYMIUM_INGOT.asOne());
+        results.add(Items.GADOLINIUM_INGOT.asOne());
+        results.add(Items.TERBIUM_INGOT.asOne());
+        results.add(Items.DYSPROSIUM_INGOT.asOne());
+        results.add(Items.HOLMIUM_INGOT.asOne());
+        results.add(Items.ERBIUM_INGOT.asOne());
+        results.add(Items.YTTERBIUM_INGOT.asOne());
 
         SlimefunItem cerium = SlimefunItem.getById("MATERIAL_BASTNAESITE_INGOT");
         if (cerium != null) {

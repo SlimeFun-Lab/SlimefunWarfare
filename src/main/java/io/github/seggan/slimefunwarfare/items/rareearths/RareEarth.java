@@ -14,7 +14,7 @@ public class RareEarth extends SimpleSlimefunItem<ItemUseHandler> {
 
     public RareEarth(SlimefunItemStack item) {
         super(Categories.RESOURCES, item, RecipeTypes.ION_SEPARATOR, new ItemStack[]{
-            Items.MONAZITE, null, null,
+            Items.MONAZITE.asOne(), null, null,
             null, null, null,
             null, null, null
         });

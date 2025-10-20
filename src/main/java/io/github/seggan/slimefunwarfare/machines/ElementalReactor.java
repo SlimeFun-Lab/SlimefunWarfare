@@ -14,9 +14,9 @@ public class ElementalReactor extends AGenerator {
 
     public ElementalReactor() {
         super(Categories.MACHINES, Items.ELEMENTAL_REACTOR, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
-            Items.UNPATENTABLIUM, Items.OSMIUM_SUPERALLOY, Items.UNPATENTABLIUM,
-            Items.OSMIUM_SUPERALLOY, Items.POWER_SUIT_GENERATOR, Items.OSMIUM_SUPERALLOY,
-            Items.UNPATENTABLIUM, Items.OSMIUM_SUPERALLOY, Items.UNPATENTABLIUM
+            Items.UNPATENTABLIUM.asOne(), Items.OSMIUM_SUPERALLOY.asOne(), Items.UNPATENTABLIUM.asOne(),
+            Items.OSMIUM_SUPERALLOY.asOne(), Items.POWER_SUIT_GENERATOR.asOne(), Items.OSMIUM_SUPERALLOY.asOne(),
+            Items.UNPATENTABLIUM.asOne(), Items.OSMIUM_SUPERALLOY.asOne(), Items.UNPATENTABLIUM.asOne()
         });
         setCapacity(32_768);
         setEnergyProduction(16_384);

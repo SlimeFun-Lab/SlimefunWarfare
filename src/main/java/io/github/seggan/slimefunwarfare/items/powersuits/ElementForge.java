@@ -39,9 +39,9 @@ public class ElementForge extends MultiBlockMachine {
 
     public ElementForge(ItemGroup category, SlimefunItemStack item) {
         super(category, item, new ItemStack[]{
-            getCorner(), new CustomItemStack(Material.PISTON, "&fPiston &7(Facing Down)"), getCorner(),
+            getCorner(), CustomItemStack.create(Material.PISTON, "&fPiston &7(Facing Down)"), getCorner(),
             new ItemStack(Material.NETHER_BRICK_WALL), null, new ItemStack(Material.NETHER_BRICK_WALL),
-            new CustomItemStack(Material.HOPPER, "&fHopper &7(Facing Inwards)"), new ItemStack(Material.SMITHING_TABLE),
+            CustomItemStack.create(Material.HOPPER, "&fHopper &7(Facing Inwards)"), new ItemStack(Material.SMITHING_TABLE),
             new ItemStack(Material.DISPENSER)
         }, BlockFace.UP);
     }
