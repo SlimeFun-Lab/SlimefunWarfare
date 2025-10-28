@@ -1,6 +1,7 @@
 package io.github.seggan.slimefunwarfare.items.powersuits;
 
 import io.github.seggan.slimefunwarfare.SlimefunWarfare;
+import io.github.seggan.slimefunwarfare.Util;
 import io.github.seggan.slimefunwarfare.lists.Categories;
 import io.github.seggan.slimefunwarfare.lists.Heads;
 import io.github.seggan.slimefunwarfare.lists.Items;
@@ -10,7 +11,6 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.NotPlaceable;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerHead;
 import org.apache.commons.lang.WordUtils;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
@@ -133,7 +133,7 @@ public enum Module {
 
         this.item = new SlimefunItemStack(
             this.name(),
-            PlayerHead.getItemStack(Heads.MODULE),
+                Util.fromBase64Hash(Heads.MODULE),
             "&6" + name,
             loreList.toArray(new String[0])
         );

@@ -3,9 +3,9 @@ package io.github.seggan.slimefunwarfare.lists;
 import io.github.mooy1.infinitylib.groups.MultiGroup;
 import io.github.mooy1.infinitylib.groups.SubGroup;
 import io.github.seggan.slimefunwarfare.SlimefunWarfare;
+import io.github.seggan.slimefunwarfare.Util;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerHead;
 import org.bukkit.Material;
 
 import lombok.experimental.UtilityClass;
@@ -45,7 +45,7 @@ public final class Categories {
 
     public static final ItemGroup POWER_SUITS = new SubGroup(
         "slimefunwarfare_power_suits",
-        CustomItemStack.create(PlayerHead.getItemStack(Heads.SUIT_HELMET), "Slimefun Warfare - Power Suits")
+        CustomItemStack.create(Util.fromBase64Hash(Heads.SUIT_HELMET), "Slimefun Warfare - Power Suits")
     );
 
     private static final ItemGroup MAIN = new MultiGroup(

@@ -46,10 +46,10 @@ public class Dummy extends SlimefunItem {
             z.setAI(false);
             z.setAware(false);
 
-            z.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(1024);
+            z.getAttribute(Attribute.MAX_HEALTH).setBaseValue(1024);
             z.setHealth(1024);
-            z.getAttribute(Attribute.GENERIC_ARMOR).setBaseValue(0);
-            z.getAttribute(Attribute.GENERIC_ARMOR_TOUGHNESS).setBaseValue(0);
+            z.getAttribute(Attribute.ARMOR).setBaseValue(0);
+            z.getAttribute(Attribute.ARMOR_TOUGHNESS).setBaseValue(0);
 
             Player p = e.getPlayer();
             if (p.getGameMode() != GameMode.CREATIVE) {

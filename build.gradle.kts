@@ -12,10 +12,10 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT")
-    compileOnly("com.github.SlimeFun-Lab:Slimefun4:3ea21da")
+    compileOnly("io.papermc.paper:paper-api:1.21.10-R0.1-SNAPSHOT")
+    compileOnly("com.github.SlimeFun-Lab:Slimefun4:6d5694e")
 
-    implementation("com.github.SlimeFun-Lab:InfinityLib:d0cae07713")
+    implementation("com.github.SlimeFun-Lab:InfinityLib:0a765fa9e6")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     implementation("commons-lang:commons-lang:2.6")
     compileOnly("org.projectlombok:lombok:1.18.38")
@@ -23,7 +23,7 @@ dependencies {
 }
 
 group = "io.github.seggan.slimefunwarfare"
-version = "UNOFFICIAL"
+version = "2.0.0-UNOFFICIAL"
 
 java {
     toolchain {

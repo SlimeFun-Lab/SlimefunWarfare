@@ -1,5 +1,6 @@
 package io.github.seggan.slimefunwarfare.items.powersuits;
 
+import io.github.seggan.slimefunwarfare.Util;
 import io.github.seggan.slimefunwarfare.lists.Categories;
 import io.github.seggan.slimefunwarfare.lists.Heads;
 import io.github.seggan.slimefunwarfare.lists.Items;
@@ -8,7 +9,6 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerHead;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
@@ -90,12 +90,12 @@ public class ModuleManipulator extends SlimefunItem {
         ));
 
         preset.addItem(SUIT_MARKER, CustomItemStack.create(
-            PlayerHead.getItemStack(Heads.SUIT_HELMET),
+            Util.fromBase64Hash(Heads.SUIT_HELMET),
             "&4Place Suit Piece Here"
         ), ChestMenuUtils.getEmptyClickHandler());
 
         preset.addItem(MODULE_MARKER, CustomItemStack.create(
-            PlayerHead.getItemStack(Heads.MODULE),
+            Util.fromBase64Hash(Heads.MODULE),
             "&6Place Module Here"
         ), ChestMenuUtils.getEmptyClickHandler());
     }
